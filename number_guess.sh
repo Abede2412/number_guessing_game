@@ -42,7 +42,7 @@ START_GAME(){
     (( COUNT++ ))
   done
 
-  echo "You guessed it in $COUNT tries. The secret number was $NUMBER. Nice job!"
+  echo "You guessed it in $COUNT tries. The secret number was $SECRET_NUMBER. Nice job!"
   INSERT_games_played=$($PSQL "insert into games(player_id, games_played) values($GET_PLAYER_ID, $COUNT)")
 }
 
