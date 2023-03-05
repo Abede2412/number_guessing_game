@@ -25,11 +25,11 @@ START_GAME(){
   echo "Guess the secret number between 1 and 1000:"
   read GUESS_NUMBER
   COUNT=1
-  while [[ $NUMBER != $GUESS_NUMBER ]]
+  while [[ $SECRET_NUMBER != $GUESS_NUMBER ]]
   do
     if [[ $GUESS_NUMBER =~ ^[0-9]+$ ]]
     then
-      if [[ $GUESS_NUMBER > $NUMBER ]]
+      if [[ $GUESS_NUMBER > $SECRET_NUMBER ]]
       then 
         echo "It's higher than that, guess again:"
       else
